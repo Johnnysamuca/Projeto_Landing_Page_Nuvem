@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* Padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(180deg, #4f3f66 0, #3b2e5f 25%, #1f1f59 50%, #001253 75%, #00004e 100%);
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-family: "Monteserrat", sans-serif;
+  color: #fff;
+}
+
+.cabecalho {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  padding: 3.9rem 4.88rem;
+  margin-bottom: 20rem;
+}
+.cabecalho__img {
+  width: 5rem;
+}
+.cabecalho__lista {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 2.76rem;
+}
+.cabecalho__item-lista {
+  list-style: none;
+  font-size: 1.92rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.cabecalho__item-lista:hover {
+  color: #818cf8;
+}
+.cabecalho__btn {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+.cabecalho__btn::after {
+  content: "→";
+}
+.cabecalho__btn:hover {
+  color: #818cf8;
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 7.63rem;
+  margin-bottom: 30rem;
+}
+.main__secao-sobre {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 3.9rem 4.88rem;
+}
+.main__secao-sobre .caixa-descricao {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2.3rem;
+  max-width: 70rem;
+}
+.main__secao-sobre .caixa-descricao .titulo {
+  font-size: 4.88rem;
+  text-align: center;
+}
+.main__secao-sobre .caixa-descricao .txt {
+  font-size: 1.92rem;
+}
+.main__secao-sobre .caixa-descricao .btn {
+  text-decoration: none;
+  border-radius: 2rem;
+  color: #000;
+  width: 60%;
+  text-align: center;
+  padding: 1.02rem 1.28rem;
+  font-size: 1.92rem;
+  background-color: white;
+  transition: transform 0.6s ease-in;
+  font-weight: 600;
+}
+.main__secao-sobre .caixa-descricao .btn:hover {
+  transform: scale(1.1);
+}
+.main__secao-empresas {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 2rem;
+  padding: 3.9rem 4.88rem;
+}
+.main__secao-empresas .subtitulo {
+  text-align: center;
+}
+.main__secao-empresas .container-imgs {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 6.1rem;
+}
+.main__secao-vantagens {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6.1rem;
+  padding: 3.9rem 4.88rem;
+}
+.main__secao-vantagens .container-titulo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.main__secao-vantagens .container-titulo .txt-realcado {
+  color: #818cf8;
+}
+.main__secao-vantagens .container-titulo .subtitulo {
+  font-size: 3.9rem;
+  font-weight: 700;
+  text-align: center;
+  max-width: 70rem;
+  line-height: 1.2;
+}
+.main__secao-vantagens .container-titulo .txt {
+  font-size: 2.3rem;
+  text-align: center;
+  max-width: 85rem;
+}
+.main__secao-vantagens .container-vantagens-card {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+}
+.main__secao-vantagens .container-vantagens-card .card-vantagem {
+  display: flex;
+  flex-flow: column;
+  align-items: start;
+  justify-content: start;
+  gap: 2rem;
+  max-width: 30rem;
+}
+.main__secao-vantagens .container-vantagens-card .card-vantagem .img-vantagem {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: #6366f1;
+  padding: 0.65rem 0.82rem;
+}
+.main__secao-vantagens .container-vantagens-card .card-vantagem .img-vantagem span {
+  width: 100%;
+}
+.main__secao-vantagens .container-vantagens-card .card-vantagem .txt-titulo {
+  font-weight: 700;
+  font-size: 1.92rem;
+}
+.main__secao-vantagens .container-vantagens-card .card-vantagem .txt-saibaMais {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1.02rem;
+  color: #818cf8;
+  text-decoration: none;
+}
+.main__secao-vantagens .container-vantagens-card .card-vantagem .txt-saibaMais::after {
+  content: "→";
+}
+.main__secao-oque-precisam {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 4.88rem;
+  padding: 3.9rem 4.88rem;
+}
+.main__secao-oque-precisam .container-titulo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.main__secao-oque-precisam .container-titulo .caixa-subtituloTxt-realce {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 0.65rem;
+}
+.main__secao-oque-precisam .container-titulo .caixa-subtituloTxt-realce .txt-realcado {
+  color: #6366f1;
+}
+.main__secao-oque-precisam .container-titulo .caixa-subtituloTxt-realce .subtitulo {
+  font-size: 3.9rem;
+}
+.main__secao-oque-precisam .container-ferramentas-oque-precisam {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 3.9rem;
+}
+.main__secao-oque-precisam .container-ferramentas-oque-precisam .coluna-ferramentas {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+}
+.main__secao-oque-precisam .container-ferramentas-oque-precisam .coluna-ferramentas .caixa-ferramenta {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+  width: max-content;
+}
+.main__secao-oque-precisam .container-ferramentas-oque-precisam .coluna-ferramentas .caixa-ferramenta svg {
+  width: 2rem;
+  align-self: start;
+  color: #6366f1;
+}
+.main__secao-oque-precisam .container-ferramentas-oque-precisam .coluna-ferramentas .caixa-ferramenta .ferramenta-txt {
+  padding-left: 1.6rem;
+  max-width: 26rem;
+}
+.main__secao-oque-precisam .container-ferramentas-oque-precisam .coluna-ferramentas .caixa-ferramenta .ferramenta-txt .txt-realcado {
+  font-weight: 700;
+}
+.main__credibilidade {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 6.1rem;
+  padding: 3.9rem 4.88rem;
+}
+.main__credibilidade .container-titulo {
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.main__credibilidade .container-titulo .caixa-subtituloTxt-realce {
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  justify-content: start;
+  gap: 0.65rem;
+}
+.main__credibilidade .container-titulo .caixa-subtituloTxt-realce .txt-realcado {
+  color: #818cf8;
+}
+.main__credibilidade .container-titulo .caixa-subtituloTxt-realce .subtitulo {
+  font-size: 3.9rem;
+  max-width: 50rem;
+}
+.main__credibilidade .container-titulo .txt {
+  max-width: 40rem;
+}
+.main__credibilidade .container-numeros {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 0;
+}
+.main__credibilidade .container-numeros .caixa-numero {
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0;
+  width: max-content;
+  position: relative;
+  padding-left: 1.6rem;
+}
+.main__credibilidade .container-numeros .caixa-numero::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 1px;
+  background-color: #fff;
+}
+.main__credibilidade .container-numeros .caixa-numero__texto {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: start;
+  gap: 0.65rem;
+}
+.main__credibilidade .container-numeros .caixa-numero__texto .sub-subtitulo {
+  font-size: 2.3rem;
+  text-align: center;
+}
+.main__iniciar-agora {
+  padding: 3.9rem 4.88rem;
+  margin-top: 11.92rem;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+}
+.main__iniciar-agora .container-titulo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 0.82rem;
+}
+.main__iniciar-agora .container-titulo .subtitulo {
+  text-align: center;
+  max-width: 70rem;
+  font-size: 3.9rem;
+}
+.main__iniciar-agora .container-btn-link {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 1.6rem;
+}
+.main__iniciar-agora .container-btn-link .btn {
+  text-decoration: none;
+  color: #000;
+  border-radius: 0.52rem;
+  background-color: #fff;
+  padding: 0.82rem;
+}
+.main__iniciar-agora .container-btn-link .txt-realcado {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0.82rem;
+  font-weight: 700;
+}
+.main__iniciar-agora .container-btn-link .txt-realcado::after {
+  content: "→";
+}
+
+.footer {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  padding: 3.9rem 4.88rem;
+}
+.footer__container-midias-sociais {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  width: 20rem;
+}
+.footer svg:hover {
+  color: #ccc;
+}
+
+/*# sourceMappingURL=style.css.map */
