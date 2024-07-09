@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Nuvem</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
     <header class="cabecalho">
@@ -21,7 +25,10 @@
         <li class="cabecalho__item-lista">Empresas</li>
       </ul>
 
-      <a class="cabecalho__btn" href="#">Faça login</a>
+      <div class="cabecalho__caixa-loginMenu">
+        <a class="cabecalho__btn" href="#">Faça login</a>
+        <span class="bi bi-list cabecalho__icone-menu"></span>
+      </div>
     </header>
 
     <main class="main">
@@ -398,7 +405,7 @@
     </main>
 
     <footer class="footer">
-      <p class="footer-txt">
+      <p class="footer__txt">
         &#169; 2020 Your Company, Inc. Todos os direitos reservados.
       </p>
 
@@ -472,5 +479,18 @@
         </svg>
       </div>
     </footer>
+
+    <aside class="aside">
+      <ul class="aside__lista">
+        <li class="aside__item-lista">Produtos</li>
+        <li class="aside__item-lista">Características</li>
+        <li class="aside__item-lista">Mercado</li>
+        <li class="aside__item-lista">Empresas</li>
+      </ul>
+
+      <span class="bi bi-x-lg aside__icone-menu"></span>
+    </aside>
+
+    <script src="./Scripts/script.js"></script>
   </body>
 </html>

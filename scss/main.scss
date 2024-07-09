@@ -8,6 +8,22 @@
   gap: $gap;
 }
 
+@mixin respond($tamanho) {
+  @if $tamanho == "grande" {
+    @media (max-width: 1078px) {
+      @content;
+    }
+  } @else if $tamanho == "acimaDamedia" {
+    @media (max-width: 806px) {
+      @content;
+    }
+  } @else if $tamanho == "media" {
+    @media (max-width: 710px) {
+      @content;
+    }
+  }
+}
+
 // Variaveis
 $preto: #000;
 $branco: #fff;
@@ -24,6 +40,10 @@ $cinza: #ccc;
 
 html {
   font-size: 62.5%;
+
+  @include respond("grande") {
+    font-size: 56.25%;
+  }
 }
 
 body {
@@ -47,12 +67,25 @@ body {
   padding: 3.9rem 4.88rem;
   margin-bottom: 20rem;
 
+  @include respond(media) {
+    padding: 2.3rem;
+  }
+
   &__img {
     width: 5rem;
+
+    @include respond(media) {
+      width: 10rem;
+    }
   }
 
   &__lista {
     @include flex(row, center, start, 2.76rem);
+
+    @include respond(media) {
+      @include flex(row, center, start, 1.6rem);
+      display: none;
+    }
   }
 
   &__item-lista {
@@ -66,19 +99,37 @@ body {
     }
   }
 
+  &__caixa-loginMenu {
+    @include flex(row, center, start, 3.9rem);
+  }
+
   &__btn {
     @include flex(row, center, start, 1.6rem);
     text-decoration: none;
     color: ($branco);
 
+    @include respond(media) {
+      font-size: 2.3rem;
+    }
+
     &::after {
       content: "\2192";
+      transform: translateX(-1rem);
     }
 
     transition: all 0.3s ease-in;
 
     &:hover {
       color: $azul-claro;
+    }
+  }
+
+  &__icone-menu {
+    display: none;
+    font-size: 3.9rem;
+
+    @include respond(media) {
+      display: block;
     }
   }
 }
@@ -104,6 +155,7 @@ body {
 
       .txt {
         font-size: 1.92rem;
+        text-align: center;
       }
 
       .btn {
@@ -136,6 +188,11 @@ body {
 
     .container-imgs {
       @include flex(row, stretch, center, 6.1rem);
+
+      @include respond("grande") {
+        @include flex(row wrap, stretch, center, 3.12rem);
+        align-items: center;
+      }
     }
   }
 
@@ -189,6 +246,12 @@ body {
           font-size: 1.92rem;
         }
 
+        .txt {
+          @include respond("grande") {
+            text-align: center;
+          }
+        }
+
         .txt-saibaMais {
           @include flex(row, center, start, 1.02rem);
           color: $azul-claro;
@@ -198,6 +261,15 @@ body {
             content: "\2192";
           }
         }
+
+        @include respond("grande") {
+          @include flex(column, center, start, 2rem);
+        }
+      }
+
+      @include respond("grande") {
+        @include flex(row wrap, center, center, 4.88rem);
+        max-width: 600px;
       }
     }
   }
@@ -226,6 +298,11 @@ body {
       @include flex(column, stretch, start, 3.9rem);
       .coluna-ferramentas {
         @include flex(row, stretch, space-between, 0);
+
+        @include respond(acimaDamedia) {
+          @include flex(row, stretch, space-between, 1.6rem);
+        }
+
         .caixa-ferramenta {
           @include flex(row, stretch, start, 0);
           width: max-content;
@@ -277,6 +354,11 @@ body {
 
     .container-numeros {
       @include flex(row, stretch, space-between, 0);
+
+      @include respond(media) {
+        @include flex(column, stretch, space-between, 3.9rem);
+      }
+
       .caixa-numero {
         @include flex(row, stretch, start, 0);
         width: max-content;
@@ -292,11 +374,18 @@ body {
           width: 1px;
           background-color: #fff;
         }
+
         &__texto {
           @include flex(column, stretch, start, 0.65rem);
 
           .sub-subtitulo {
             font-size: 2.3rem;
+            text-align: center;
+          }
+        }
+
+        & .txt {
+          @include respond(acimaDamedia) {
             text-align: center;
           }
         }
@@ -317,6 +406,12 @@ body {
         text-align: center;
         max-width: 70rem;
         font-size: 3.9rem;
+      }
+
+      & .txt {
+        @include respond(acimaDamedia) {
+          text-align: center;
+        }
       }
     }
 
@@ -348,12 +443,66 @@ body {
   @include flex(row, center, space-between, 0);
   padding: 3.9rem 4.88rem;
 
+  &__txt {
+    @include respond(media) {
+      text-align: center;
+      max-width: 25rem;
+    }
+  }
+
   &__container-midias-sociais {
     @include flex(row, center, start, 2rem);
     width: 20rem;
+
+    @include respond(media) {
+      width: 15rem;
+      @include flex(row, center, start, 0.65rem);
+    }
   }
 
   svg:hover {
     color: $cinza;
+  }
+}
+
+// Aside
+
+.aside {
+  @include flex(row, center, center, 1.6rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $cinza;
+  display: none;
+  backdrop-filter: blur(4px);
+  opacity: 90%;
+  display: none;
+
+  &__lista {
+    @include flex(column, center, start, 2.3rem);
+    z-index: 1;
+  }
+
+  &__item-lista {
+    font-size: 2.76rem;
+    color: $preto;
+    list-style: none;
+    font-weight: 700;
+
+    &:hover {
+      color: $azul-meioForte;
+    }
+  }
+
+  &__icone-menu {
+    font-size: 3.9rem;
+    font-weight: 700;
+    color: $preto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translate(-2rem, 2rem);
   }
 }
