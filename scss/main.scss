@@ -41,8 +41,12 @@ $cinza: #ccc;
 html {
   font-size: 62.5%;
 
-  @include respond("grande") {
+  @include respond(grande) {
     font-size: 56.25%;
+  }
+
+  @include respond(acimaDamedia) {
+    font-size: 50%;
   }
 }
 
@@ -301,6 +305,10 @@ body {
 
         @include respond(acimaDamedia) {
           @include flex(row, stretch, space-between, 1.6rem);
+        }
+
+        @include respond(media) {
+          @include flex(column, stretch, space-between, 1.6rem);
         }
 
         .caixa-ferramenta {

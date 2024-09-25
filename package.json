@@ -1,8 +1,8 @@
 {
-  "name": "Projeto",
+  "name": "projeto",
   "version": "1.0.0",
   "description": "Projeto ainda sem nome",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "watch:sass": "sass ./scss/main.scss ./css/style.css -w",
     "compile:sass": "sass scss/main.scss css/style.css "
